@@ -7,8 +7,8 @@ copyright = 'GNU GPLv3'
 author = 'Lucas DUVAL'
 
 language = 'en'
-release = '0.7.1'
-version = '0.7.1'
+release = '0.8.0'
+version = '0.8.0'
 
 # -- General configuration
 
