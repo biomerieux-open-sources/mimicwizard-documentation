@@ -251,7 +251,7 @@ You can easily add Emergency Department data and Discharge note in the applicati
 Note that mimiciv_ed schema should be in the same database as your others MIMIC-IV schemas (mimiciv_hosp,mimiciv_icu,mimiciv_derived,public)
 
 
-**MIMIC-IV NOTES*
+**MIMIC-IV NOTES**
 
 1. Download data on the official physionet repository : `Physionet - MIMIC-IV-NOTE 2.2<https://physionet.org/content/mimic-iv-note/2.2/>`
 2. Populate database using mimic-code repository : `Github - mimic-code, build notes <https://github.com/MIT-LCP/mimic-code/tree/main/mimic-iv-note/buildmimic/postgres>`
