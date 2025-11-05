@@ -25,7 +25,7 @@ C. Configure and start MIMICWizard
    * Configure the application configuration file
    * Run the application
 
-D. Extend and optimize the application (Optionnal)
+D. Extend and optimize the application (Optional)
 
    * Add additional index to speed up the application
    * Add microbiology supplementary data to the application
@@ -207,7 +207,7 @@ Once all the packages are downloaded and installed, database is loaded, and conf
    R -e "shiny::runApp()"
 
 
-D. Extend and optimize the application (Optionnal)
+D. Extend and optimize the application (Optional)
 **************************************************
 
 
