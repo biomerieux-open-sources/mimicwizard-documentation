@@ -43,6 +43,7 @@ Changelog
    :target: https://github.com/biomerieux-open-sources/mimicwizard
    :alt: MIMICWizard GitHub Card
 
+* **v0.8.0 (2025-11-05)** : Discharge notes and patient explorer enhancements 
 * **v0.7.1 (2025-06-27)** : Bugfixes and optimization
 * **v0.7.0 (2025-06-20)** : Public release associated with online demo version
 * **v0.6.4 (2025-03-13)** : Initial public release

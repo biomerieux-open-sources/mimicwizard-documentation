@@ -166,6 +166,9 @@ The configuration file is located at the root of MIMIWizard folder. This file is
 | **IS_ED_LOADED**     | - TRUE                                    | Is MIMICIV ED schema loaded ? This add new information in the patient explorer tab for patient with an emergency admission path                                  |
 |                      | - FALSE                                   | Keep this to false f you're using MIMICIV demo                                                                                                                   |
 +----------------------+-------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| **IS_NOTE_LOADED**   | - TRUE                                    | Is MIMICIV NOTE schema loaded ? This add new information in the patient explorer tab for patient with a discharge note associated with its hospital stay         |
+|                      | - FALSE                                   | Keep this to false f you're using MIMICIV demo                                                                                                                   |
++----------------------+-------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | **CACHE_DIR**        | empty string or <path/to/cache/folder>    | Repository where the application cache object are written                                                                                                        |
 |                      |                                           | Default "" create a cache folder in the application directory                                                                                                    |
 |                      |                                           | Shiny Server should have writing rights in this folder                                                                                                           |
@@ -233,6 +236,29 @@ Add this supplementary data to your application by running the following command
 .. code-block:: bash
 
    psql -d mimiciv -f additional.sql
+
+
+Add Emergency Department data (mimiciv_ed) and discharge note (mimiciv_note)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+You can easily add Emergency Department data and Discharge note in the application. 
+
+**MIMIC-IV ED**
+
+1. Download data on the official physionet repository : `Physionet - MIMIC-IV-ED 2.2<https://physionet.org/content/mimic-iv-ed/2.2/>`
+2. Populate database using mimic-code repository : `Github - mimic-code, build ED <https://github.com/MIT-LCP/mimic-code/tree/main/mimic-iv-ed/buildmimic/postgres>`
+3. Set-up global.R with *IS_ED_LOADED = TRUE*
+
+Note that mimiciv_ed schema should be in the same database as your others MIMIC-IV schemas (mimiciv_hosp,mimiciv_icu,mimiciv_derived,public)
+
+
+**MIMIC-IV NOTES*
+
+1. Download data on the official physionet repository : `Physionet - MIMIC-IV-NOTE 2.2<https://physionet.org/content/mimic-iv-note/2.2/>`
+2. Populate database using mimic-code repository : `Github - mimic-code, build notes <https://github.com/MIT-LCP/mimic-code/tree/main/mimic-iv-note/buildmimic/postgres>`
+3. Set-up global.R with *IS_NOTE_LOADED = TRUE*
+
+Note that mimiciv_note schema should be in the same database as your others MIMIC-IV schemas (mimiciv_hosp,mimiciv_icu,mimiciv_derived,public)
+
 
 
 Host the application on your infrastructure
