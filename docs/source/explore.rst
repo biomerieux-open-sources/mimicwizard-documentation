@@ -92,9 +92,11 @@ Example of cohort creation
 
 This section is intended to help you fully understand the cohort creation module with multiple concrete examples.
 
-Example 1 : Create a cohort of patients not dead in ICU or if they died in ICU they needed to be under EEG at any time. Whatever the condition the patient fit, he should have an hematocrit value during the first 24h of the ICU stay.
+**Example 1 :** 
 
-Conditional logic : (Death in ICU = No) OR (EEG = Yes) AND (Hematocrit during the first 24h of the ICU stay = Yes)
+Create a cohort of patients not dead in ICU or if they died in ICU they needed to not be under EEG at any time. Whatever the condition the patient fit, he should have an hematocrit value during the first 24h of the ICU stay.
+
+Conditional logic : (Death in ICU = No) OR (EEG = No) AND (Hematocrit during the first 24h of the ICU stay = Yes)
 
 .. figure:: 
       assets/cohort_example_1.png
