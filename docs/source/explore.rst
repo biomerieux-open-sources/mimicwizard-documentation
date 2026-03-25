@@ -80,11 +80,27 @@ The cohort generation module help you to create cohort based on event occurence.
 - Time condition (relative to the ICU in-time)
 - Value
 - Aggregated value (min, max, median, mean, sum)
+- Absence of an event
 
 .. hint:: You can use the glasses icon to display a preview of the registered data in the whole database for this event
 
 Once you've fetched your cohort, you can preview some statistics about this fetched cohort.
 If theses informations fits your needs, you can persist it to explore it in the cohort explorer tab.
+
+Example of cohort creation
+++++++++++++++++++++++++++++
+
+This section is intended to help you fully understand the cohort creation module with multiple concrete examples.
+
+Example 1 : Create a cohort of patients not dead in ICU or if they died in ICU they needed to be under EEG at any time. Whatever the condition the patient fit, he should have an hematocrit value during the first 24h of the ICU stay.
+
+Conditional logic : (Death in ICU = No) OR (EEG = Yes) AND (Hematocrit during the first 24h of the ICU stay = Yes)
+
+.. figure:: 
+      assets/cohort_example_1.png
+      :name: cohort_example_1
+      :width: 100%
+      :class: no-scaled-link
 
 Explore a created cohort
 ************************
