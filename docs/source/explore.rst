@@ -93,14 +93,23 @@ Example of cohort creation
 This section is intended to help you fully understand the cohort creation module with multiple concrete examples.
 
 **Example 1 :** 
-
 Create a cohort of patients not dead in ICU or if they died in ICU they needed to not be under EEG at any time. Whatever the condition the patient fit, he should have an hematocrit value during the first 24h of the ICU stay.
-
-Conditional logic : (Death in ICU = No) OR (EEG = No) AND (Hematocrit during the first 24h of the ICU stay = Yes)
+Conditional logic : ((Death in ICU = No) OR (EEG = No)) AND (Hematocrit during the first 24h of the ICU stay = Yes)
 
 .. figure:: 
       assets/cohort_example_1.png
       :name: cohort_example_1
+      :width: 100%
+      :class: no-scaled-link
+
+**Example 2 :** 
+Create a cohort of patients having an elevated heart rate (>=140) at anytime during the first 12 hours of the ICU stay and a high sodium level at admission (>=150)
+Conditional logic : ((Heart rate during the first 12h of the ICU stay >= 140) AND (Sodium at admission >= 150))
+
+Note : As we want to retrieve sodium at admission, we use a proxy which is minimum sodium value during the first 24 hours of the stay.
+.. figure:: 
+      assets/cohort_example_2.png
+      :name: cohort_example_2
       :width: 100%
       :class: no-scaled-link
 
@@ -169,23 +178,8 @@ Sub-stratify a cohort
 
 Using the "Add a stratification" panel you can choose to separate your cohort into 2 subgroup to observe differences.
 
-The stratification panel offer 2 differents stratification model, the first one is based on demographic data and the second one one the same model as the cohort creation module.
+The stratification panel offer the same model as the cohort creation module. Please refers to the cohort creation section for more details about how to use it.
 
-+--------------------------------------+
-| Demographic parameters               |
-+======================================+
-| Gender                               |
-+--------------------------------------+
-| Age                                  |
-+--------------------------------------+
-| Hospitalization length (in days)     |
-+--------------------------------------+
-| In hospital death                    |
-+--------------------------------------+
-| Death <1 years after hospitalization |
-+--------------------------------------+
-
-*Table : List of available demographics restriction in cohort stratification panel*
 
 Removing outliers
 =================
