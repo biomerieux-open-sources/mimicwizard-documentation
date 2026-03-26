@@ -107,6 +107,7 @@ Create a cohort of patients having an elevated heart rate (>=140) at anytime dur
 Conditional logic : ((Heart rate during the first 12h of the ICU stay >= 140) AND (Sodium at admission >= 150))
 
 Note : As we want to retrieve sodium at admission, we use a proxy which is minimum sodium value during the first 24 hours of the stay.
+
 .. figure:: 
       assets/cohort_example_2.png
       :name: cohort_example_2
