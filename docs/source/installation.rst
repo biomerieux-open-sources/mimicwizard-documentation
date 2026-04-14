@@ -42,7 +42,7 @@ You can download the MIMICWizard **source code** using git or directly by zip do
 
 In order to install the app, you'll need to have **R 4.4** installed `R official repository (CRAN) <https://cran.r-project.org/mirrors.html>`_ 
 
-For Windows user, you need to install Rtools to compile some of the packages, available on the `Rtools official repository <https://cran.r-project.org/bin/windows/Rtools/>`_
+For Windows user, you need to install Rtools to compile some of the packages, available on the `Rtools official repository <https://cran.r-project.org/bin/windows/Rtools/>`_ (don't forget to add Rtools to your PATH environment variable : `rtools44\x86_64-w64-mingw32.static.posix\bin` and `rtools44\usr\bin`).
 
 Once R is installed, open a terminal in the project directory and run the following command to install the required packages :
 
